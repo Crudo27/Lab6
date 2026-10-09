@@ -1,0 +1,554 @@
+
+CARRITO DE COMPRAS
+1. Agregar producto
+2. Listar productos
+3. Agregar al carrito
+4. Ver carrito
+5. Eliminar del carrito
+6. Aplicar descuento
+7. Calcular envío
+8. Realizar compra
+9. Historial de compras
+10. Registrarse
+11. Iniciar sesión
+12. Cerrar sesión
+13. Agregar reseña y calificación
+14. Ver reseñas
+0. Salir
+Usuario: sin sesión
+Opción: 1
+Nombre del producto: Teclado
+Precio S/: 120
+Producto agregado.
+
+CARRITO DE COMPRAS
+1. Agregar producto
+2. Listar productos
+3. Agregar al carrito
+4. Ver carrito
+5. Eliminar del carrito
+6. Aplicar descuento
+7. Calcular envío
+8. Realizar compra
+9. Historial de compras
+10. Registrarse
+11. Iniciar sesión
+12. Cerrar sesión
+13. Agregar reseña y calificación
+14. Ver reseñas
+0. Salir
+Usuario: sin sesión
+Opción: 1
+Nombre del producto: Mouse
+Precio S/: 50
+Producto agregado.
+
+CARRITO DE COMPRAS
+1. Agregar producto
+2. Listar productos
+3. Agregar al carrito
+4. Ver carrito
+5. Eliminar del carrito
+6. Aplicar descuento
+7. Calcular envío
+8. Realizar compra
+9. Historial de compras
+10. Registrarse
+11. Iniciar sesión
+12. Cerrar sesión
+13. Agregar reseña y calificación
+14. Ver reseñas
+0. Salir
+Usuario: sin sesión
+Opción: 2
+1 | Teclado | S/ 120.00
+2 | Mouse | S/ 50.00
+
+CARRITO DE COMPRAS
+1. Agregar producto
+2. Listar productos
+3. Agregar al carrito
+4. Ver carrito
+5. Eliminar del carrito
+6. Aplicar descuento
+7. Calcular envío
+8. Realizar compra
+9. Historial de compras
+10. Registrarse
+11. Iniciar sesión
+12. Cerrar sesión
+13. Agregar reseña y calificación
+14. Ver reseñas
+0. Salir
+Usuario: sin sesión
+Opción: 10
+Nombre: Piero
+Correo: piero@example.com
+Contraseña: clave123
+Usuario registrado.
+
+CARRITO DE COMPRAS
+1. Agregar producto
+2. Listar productos
+3. Agregar al carrito
+4. Ver carrito
+5. Eliminar del carrito
+6. Aplicar descuento
+7. Calcular envío
+8. Realizar compra
+9. Historial de compras
+10. Registrarse
+11. Iniciar sesión
+12. Cerrar sesión
+13. Agregar reseña y calificación
+14. Ver reseñas
+0. Salir
+Usuario: sin sesión
+Opción: 11
+Correo: piero@example.com
+Contraseña: incorrecta
+Correo o contraseña incorrectos.
+
+CARRITO DE COMPRAS
+1. Agregar producto
+2. Listar productos
+3. Agregar al carrito
+4. Ver carrito
+5. Eliminar del carrito
+6. Aplicar descuento
+7. Calcular envío
+8. Realizar compra
+9. Historial de compras
+10. Registrarse
+11. Iniciar sesión
+12. Cerrar sesión
+13. Agregar reseña y calificación
+14. Ver reseñas
+0. Salir
+Usuario: sin sesión
+Opción: 11
+Correo: piero@example.com
+Contraseña: clave123
+Sesión iniciada.
+
+CARRITO DE COMPRAS
+1. Agregar producto
+2. Listar productos
+3. Agregar al carrito
+4. Ver carrito
+5. Eliminar del carrito
+6. Aplicar descuento
+7. Calcular envío
+8. Realizar compra
+9. Historial de compras
+10. Registrarse
+11. Iniciar sesión
+12. Cerrar sesión
+13. Agregar reseña y calificación
+14. Ver reseñas
+0. Salir
+Usuario: Piero
+Opción: 3
+ID del producto: 1
+Cantidad: 2
+Producto agregado al carrito.
+
+CARRITO DE COMPRAS
+1. Agregar producto
+2. Listar productos
+3. Agregar al carrito
+4. Ver carrito
+5. Eliminar del carrito
+6. Aplicar descuento
+7. Calcular envío
+8. Realizar compra
+9. Historial de compras
+10. Registrarse
+11. Iniciar sesión
+12. Cerrar sesión
+13. Agregar reseña y calificación
+14. Ver reseñas
+0. Salir
+Usuario: Piero
+Opción: 3
+ID del producto: 2
+Cantidad: 1
+Producto agregado al carrito.
+
+CARRITO DE COMPRAS
+1. Agregar producto
+2. Listar productos
+3. Agregar al carrito
+4. Ver carrito
+5. Eliminar del carrito
+6. Aplicar descuento
+7. Calcular envío
+8. Realizar compra
+9. Historial de compras
+10. Registrarse
+11. Iniciar sesión
+12. Cerrar sesión
+13. Agregar reseña y calificación
+14. Ver reseñas
+0. Salir
+Usuario: Piero
+Opción: 5
+ID a eliminar: 2
+Producto eliminado del carrito.
+
+CARRITO DE COMPRAS
+1. Agregar producto
+2. Listar productos
+3. Agregar al carrito
+4. Ver carrito
+5. Eliminar del carrito
+6. Aplicar descuento
+7. Calcular envío
+8. Realizar compra
+9. Historial de compras
+10. Registrarse
+11. Iniciar sesión
+12. Cerrar sesión
+13. Agregar reseña y calificación
+14. Ver reseñas
+0. Salir
+Usuario: Piero
+Opción: 3
+ID del producto: 2
+Cantidad: 1
+Producto agregado al carrito.
+
+CARRITO DE COMPRAS
+1. Agregar producto
+2. Listar productos
+3. Agregar al carrito
+4. Ver carrito
+5. Eliminar del carrito
+6. Aplicar descuento
+7. Calcular envío
+8. Realizar compra
+9. Historial de compras
+10. Registrarse
+11. Iniciar sesión
+12. Cerrar sesión
+13. Agregar reseña y calificación
+14. Ver reseñas
+0. Salir
+Usuario: Piero
+Opción: 6
+Descuento en porcentaje: 10
+1 | Teclado | Cantidad: 2 | S/ 240.00
+2 | Mouse | Cantidad: 1 | S/ 50.00
+Subtotal: S/ 290.00
+Descuento: S/ 29.00
+Envío: S/ 0.00
+Total: S/ 261.00
+
+CARRITO DE COMPRAS
+1. Agregar producto
+2. Listar productos
+3. Agregar al carrito
+4. Ver carrito
+5. Eliminar del carrito
+6. Aplicar descuento
+7. Calcular envío
+8. Realizar compra
+9. Historial de compras
+10. Registrarse
+11. Iniciar sesión
+12. Cerrar sesión
+13. Agregar reseña y calificación
+14. Ver reseñas
+0. Salir
+Usuario: Piero
+Opción: 7
+Zona (RECOJO/LOCAL/NACIONAL): LOCAL
+1 | Teclado | Cantidad: 2 | S/ 240.00
+2 | Mouse | Cantidad: 1 | S/ 50.00
+Subtotal: S/ 290.00
+Descuento: S/ 29.00
+Envío: S/ 10.00
+Total: S/ 271.00
+
+CARRITO DE COMPRAS
+1. Agregar producto
+2. Listar productos
+3. Agregar al carrito
+4. Ver carrito
+5. Eliminar del carrito
+6. Aplicar descuento
+7. Calcular envío
+8. Realizar compra
+9. Historial de compras
+10. Registrarse
+11. Iniciar sesión
+12. Cerrar sesión
+13. Agregar reseña y calificación
+14. Ver reseñas
+0. Salir
+Usuario: Piero
+Opción: 8
+1 | Teclado | Cantidad: 2 | S/ 240.00
+2 | Mouse | Cantidad: 1 | S/ 50.00
+Subtotal: S/ 290.00
+Descuento: S/ 29.00
+Envío: S/ 10.00
+Total: S/ 271.00
+Confirmar compra (S/N): N
+Compra cancelada.
+
+CARRITO DE COMPRAS
+1. Agregar producto
+2. Listar productos
+3. Agregar al carrito
+4. Ver carrito
+5. Eliminar del carrito
+6. Aplicar descuento
+7. Calcular envío
+8. Realizar compra
+9. Historial de compras
+10. Registrarse
+11. Iniciar sesión
+12. Cerrar sesión
+13. Agregar reseña y calificación
+14. Ver reseñas
+0. Salir
+Usuario: Piero
+Opción: 8
+1 | Teclado | Cantidad: 2 | S/ 240.00
+2 | Mouse | Cantidad: 1 | S/ 50.00
+Subtotal: S/ 290.00
+Descuento: S/ 29.00
+Envío: S/ 10.00
+Total: S/ 271.00
+Confirmar compra (S/N): S
+Compra realizada.
+Compra #1 | 08/10/2026 22:27
+1 | Teclado | Cantidad: 2 | S/ 240.00
+2 | Mouse | Cantidad: 1 | S/ 50.00
+Subtotal: S/ 290.00
+Descuento: S/ 29.00
+Envío: S/ 10.00
+Total: S/ 271.00
+
+CARRITO DE COMPRAS
+1. Agregar producto
+2. Listar productos
+3. Agregar al carrito
+4. Ver carrito
+5. Eliminar del carrito
+6. Aplicar descuento
+7. Calcular envío
+8. Realizar compra
+9. Historial de compras
+10. Registrarse
+11. Iniciar sesión
+12. Cerrar sesión
+13. Agregar reseña y calificación
+14. Ver reseñas
+0. Salir
+Usuario: Piero
+Opción: 9
+Compra #1 | 08/10/2026 22:27
+1 | Teclado | Cantidad: 2 | S/ 240.00
+2 | Mouse | Cantidad: 1 | S/ 50.00
+Subtotal: S/ 290.00
+Descuento: S/ 29.00
+Envío: S/ 10.00
+Total: S/ 271.00
+
+CARRITO DE COMPRAS
+1. Agregar producto
+2. Listar productos
+3. Agregar al carrito
+4. Ver carrito
+5. Eliminar del carrito
+6. Aplicar descuento
+7. Calcular envío
+8. Realizar compra
+9. Historial de compras
+10. Registrarse
+11. Iniciar sesión
+12. Cerrar sesión
+13. Agregar reseña y calificación
+14. Ver reseñas
+0. Salir
+Usuario: Piero
+Opción: 13
+ID a reseñar: 1
+Calificación (1 a 5): 5
+Reseña: Buen teclado, funciona bien.
+Reseña registrada.
+
+CARRITO DE COMPRAS
+1. Agregar producto
+2. Listar productos
+3. Agregar al carrito
+4. Ver carrito
+5. Eliminar del carrito
+6. Aplicar descuento
+7. Calcular envío
+8. Realizar compra
+9. Historial de compras
+10. Registrarse
+11. Iniciar sesión
+12. Cerrar sesión
+13. Agregar reseña y calificación
+14. Ver reseñas
+0. Salir
+Usuario: Piero
+Opción: 14
+ID del producto: 1
+Piero | 5/5 | Buen teclado, funciona bien.
+Promedio: 5.00/5
+
+CARRITO DE COMPRAS
+1. Agregar producto
+2. Listar productos
+3. Agregar al carrito
+4. Ver carrito
+5. Eliminar del carrito
+6. Aplicar descuento
+7. Calcular envío
+8. Realizar compra
+9. Historial de compras
+10. Registrarse
+11. Iniciar sesión
+12. Cerrar sesión
+13. Agregar reseña y calificación
+14. Ver reseñas
+0. Salir
+Usuario: Piero
+Opción: 13
+ID a reseñar: 1
+Calificación (1 a 5): 4
+Reseña: Segunda reseña
+Ya reseñaste este producto.
+
+CARRITO DE COMPRAS
+1. Agregar producto
+2. Listar productos
+3. Agregar al carrito
+4. Ver carrito
+5. Eliminar del carrito
+6. Aplicar descuento
+7. Calcular envío
+8. Realizar compra
+9. Historial de compras
+10. Registrarse
+11. Iniciar sesión
+12. Cerrar sesión
+13. Agregar reseña y calificación
+14. Ver reseñas
+0. Salir
+Usuario: Piero
+Opción: 12
+Sesión cerrada.
+
+CARRITO DE COMPRAS
+1. Agregar producto
+2. Listar productos
+3. Agregar al carrito
+4. Ver carrito
+5. Eliminar del carrito
+6. Aplicar descuento
+7. Calcular envío
+8. Realizar compra
+9. Historial de compras
+10. Registrarse
+11. Iniciar sesión
+12. Cerrar sesión
+13. Agregar reseña y calificación
+14. Ver reseñas
+0. Salir
+Usuario: sin sesión
+Opción: 10
+Nombre: Ana
+Correo: ana@example.com
+Contraseña: clave456
+Usuario registrado.
+
+CARRITO DE COMPRAS
+1. Agregar producto
+2. Listar productos
+3. Agregar al carrito
+4. Ver carrito
+5. Eliminar del carrito
+6. Aplicar descuento
+7. Calcular envío
+8. Realizar compra
+9. Historial de compras
+10. Registrarse
+11. Iniciar sesión
+12. Cerrar sesión
+13. Agregar reseña y calificación
+14. Ver reseñas
+0. Salir
+Usuario: sin sesión
+Opción: 11
+Correo: ana@example.com
+Contraseña: clave456
+Sesión iniciada.
+
+CARRITO DE COMPRAS
+1. Agregar producto
+2. Listar productos
+3. Agregar al carrito
+4. Ver carrito
+5. Eliminar del carrito
+6. Aplicar descuento
+7. Calcular envío
+8. Realizar compra
+9. Historial de compras
+10. Registrarse
+11. Iniciar sesión
+12. Cerrar sesión
+13. Agregar reseña y calificación
+14. Ver reseñas
+0. Salir
+Usuario: Ana
+Opción: 9
+No tienes compras registradas.
+
+CARRITO DE COMPRAS
+1. Agregar producto
+2. Listar productos
+3. Agregar al carrito
+4. Ver carrito
+5. Eliminar del carrito
+6. Aplicar descuento
+7. Calcular envío
+8. Realizar compra
+9. Historial de compras
+10. Registrarse
+11. Iniciar sesión
+12. Cerrar sesión
+13. Agregar reseña y calificación
+14. Ver reseñas
+0. Salir
+Usuario: Ana
+Opción: 13
+ID a reseñar: 1
+Calificación (1 a 5): 5
+Reseña: No lo compré
+Solo puedes reseñar productos que hayas comprado.
+
+CARRITO DE COMPRAS
+1. Agregar producto
+2. Listar productos
+3. Agregar al carrito
+4. Ver carrito
+5. Eliminar del carrito
+6. Aplicar descuento
+7. Calcular envío
+8. Realizar compra
+9. Historial de compras
+10. Registrarse
+11. Iniciar sesión
+12. Cerrar sesión
+13. Agregar reseña y calificación
+14. Ver reseñas
+0. Salir
+Usuario: Ana
+Opción: 0
+Saliendo...

@@ -1,0 +1,240 @@
+
+GESTIÓN DE PEDIDOS
+1. Agregar pedido
+2. Mostrar pedidos
+3. Eliminar pedido
+4. Buscar pedido
+5. Actualizar nombre
+6. Contar pedidos
+7. Marcar como completo
+8. Mostrar pedidos por estado
+9. Contar pendientes
+10. Historial
+0. Salir
+Opción: 1
+Introduce el nombre del plato: Sopa
+Introduce el tipo del plato: Entrada
+Pedido agregado: Sopa
+
+GESTIÓN DE PEDIDOS
+1. Agregar pedido
+2. Mostrar pedidos
+3. Eliminar pedido
+4. Buscar pedido
+5. Actualizar nombre
+6. Contar pedidos
+7. Marcar como completo
+8. Mostrar pedidos por estado
+9. Contar pendientes
+10. Historial
+0. Salir
+Opción: 1
+Introduce el nombre del plato: Pollo
+Introduce el tipo del plato: Fondo
+Pedido agregado: Pollo
+
+GESTIÓN DE PEDIDOS
+1. Agregar pedido
+2. Mostrar pedidos
+3. Eliminar pedido
+4. Buscar pedido
+5. Actualizar nombre
+6. Contar pedidos
+7. Marcar como completo
+8. Mostrar pedidos por estado
+9. Contar pendientes
+10. Historial
+0. Salir
+Opción: 2
+ID | Plato | Tipo | Estado
+1 | Sopa | Entrada | PENDIENTE
+2 | Pollo | Fondo | PENDIENTE
+
+GESTIÓN DE PEDIDOS
+1. Agregar pedido
+2. Mostrar pedidos
+3. Eliminar pedido
+4. Buscar pedido
+5. Actualizar nombre
+6. Contar pedidos
+7. Marcar como completo
+8. Mostrar pedidos por estado
+9. Contar pendientes
+10. Historial
+0. Salir
+Opción: 5
+ID a actualizar: 2
+Nuevo nombre: Pollo al horno
+Pedido actualizado.
+
+GESTIÓN DE PEDIDOS
+1. Agregar pedido
+2. Mostrar pedidos
+3. Eliminar pedido
+4. Buscar pedido
+5. Actualizar nombre
+6. Contar pedidos
+7. Marcar como completo
+8. Mostrar pedidos por estado
+9. Contar pendientes
+10. Historial
+0. Salir
+Opción: 4
+1. Nombre
+2. Tipo
+Opción: 2
+Tipo: fondo
+ID | Plato | Tipo | Estado
+2 | Pollo al horno | Fondo | PENDIENTE
+
+GESTIÓN DE PEDIDOS
+1. Agregar pedido
+2. Mostrar pedidos
+3. Eliminar pedido
+4. Buscar pedido
+5. Actualizar nombre
+6. Contar pedidos
+7. Marcar como completo
+8. Mostrar pedidos por estado
+9. Contar pendientes
+10. Historial
+0. Salir
+Opción: 6
+Total de pedidos actuales: 2
+Entrada: 1
+Fondo: 1
+
+GESTIÓN DE PEDIDOS
+1. Agregar pedido
+2. Mostrar pedidos
+3. Eliminar pedido
+4. Buscar pedido
+5. Actualizar nombre
+6. Contar pedidos
+7. Marcar como completo
+8. Mostrar pedidos por estado
+9. Contar pendientes
+10. Historial
+0. Salir
+Opción: 7
+ID a completar: 1
+Pedido completo.
+
+GESTIÓN DE PEDIDOS
+1. Agregar pedido
+2. Mostrar pedidos
+3. Eliminar pedido
+4. Buscar pedido
+5. Actualizar nombre
+6. Contar pedidos
+7. Marcar como completo
+8. Mostrar pedidos por estado
+9. Contar pendientes
+10. Historial
+0. Salir
+Opción: 8
+1. Pendientes
+2. Completos
+Opción: 2
+ID | Plato | Tipo | Estado
+1 | Sopa | Entrada | COMPLETO
+
+GESTIÓN DE PEDIDOS
+1. Agregar pedido
+2. Mostrar pedidos
+3. Eliminar pedido
+4. Buscar pedido
+5. Actualizar nombre
+6. Contar pedidos
+7. Marcar como completo
+8. Mostrar pedidos por estado
+9. Contar pendientes
+10. Historial
+0. Salir
+Opción: 9
+Pedidos pendientes: 1
+
+GESTIÓN DE PEDIDOS
+1. Agregar pedido
+2. Mostrar pedidos
+3. Eliminar pedido
+4. Buscar pedido
+5. Actualizar nombre
+6. Contar pedidos
+7. Marcar como completo
+8. Mostrar pedidos por estado
+9. Contar pendientes
+10. Historial
+0. Salir
+Opción: 3
+ID | Plato | Tipo | Estado
+1 | Sopa | Entrada | COMPLETO
+2 | Pollo al horno | Fondo | PENDIENTE
+ID a eliminar: 2
+Pedido eliminado.
+
+GESTIÓN DE PEDIDOS
+1. Agregar pedido
+2. Mostrar pedidos
+3. Eliminar pedido
+4. Buscar pedido
+5. Actualizar nombre
+6. Contar pedidos
+7. Marcar como completo
+8. Mostrar pedidos por estado
+9. Contar pendientes
+10. Historial
+0. Salir
+Opción: 10
+ID | Plato | Tipo | Estado
+1 | Sopa | Entrada | COMPLETO
+2 | Pollo al horno | Fondo | ELIMINADO
+
+GESTIÓN DE PEDIDOS
+1. Agregar pedido
+2. Mostrar pedidos
+3. Eliminar pedido
+4. Buscar pedido
+5. Actualizar nombre
+6. Contar pedidos
+7. Marcar como completo
+8. Mostrar pedidos por estado
+9. Contar pendientes
+10. Historial
+0. Salir
+Opción: 3
+ID | Plato | Tipo | Estado
+1 | Sopa | Entrada | COMPLETO
+ID a eliminar: 99
+Número de pedido inválido.
+
+GESTIÓN DE PEDIDOS
+1. Agregar pedido
+2. Mostrar pedidos
+3. Eliminar pedido
+4. Buscar pedido
+5. Actualizar nombre
+6. Contar pedidos
+7. Marcar como completo
+8. Mostrar pedidos por estado
+9. Contar pendientes
+10. Historial
+0. Salir
+Opción: 7
+ID a completar: texto
+Debes ingresar un número entero.
+
+GESTIÓN DE PEDIDOS
+1. Agregar pedido
+2. Mostrar pedidos
+3. Eliminar pedido
+4. Buscar pedido
+5. Actualizar nombre
+6. Contar pedidos
+7. Marcar como completo
+8. Mostrar pedidos por estado
+9. Contar pendientes
+10. Historial
+0. Salir
+Opción: 0
+Saliendo...

@@ -64,6 +64,6 @@ El carrito requiere iniciar sesión. Al cerrar sesión se vacían el carrito, el
 
 Los datos permanecen en memoria mientras se ejecuta el programa. No se solicita una base de datos ni persistencia entre ejecuciones. La compra es un registro local de la práctica y no procesa pagos.
 
-Las imágenes son simulaciones de la consola de Eclipse construidas a partir de salidas reales de los programas. Se agrupan operaciones de una misma sesión para mostrar sus resultados con claridad.
+Las trece imágenes muestran salidas registradas al compilar y ejecutar los programas con Java 17. Las imágenes de resultados omiten la repetición del menú para facilitar la lectura. Las transcripciones completas de compilación y ejecución se encuentran en pruebas/evidencias. Los resultados de Verificacion se conservan en pruebas/resultados.txt.
 
-El código fuente se mantiene sin comentarios. La explicación de cada archivo, las decisiones de implementación, las pruebas y el cuestionario citado están en el informe.
+El código fuente se mantiene sin comentarios. El informe utiliza la plantilla simple UCSM del Laboratorio 5: encabezado institucional, tabla de Código, Apellidos y Nombres y Fecha, y las secciones Actividades, Ejercicios, Cuestionario y Bibliografía. Incluye el código completo de cada archivo Java y de configuración, seguido de su explicación, las evidencias de ejecución y el cuestionario con referencias científicas y DOI.
