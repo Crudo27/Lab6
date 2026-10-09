@@ -1,13 +1,21 @@
 package modelo;
 
 public class Pedido {
+	private int id;
 	private String nombrePlato;
 	private String tipo;
-	
-	public Pedido(String nombrePlato, String tipo)
+	private EstadoPedido estado;
+
+	public Pedido(int id, String nombrePlato, String tipo)
 	{
-		this.setNombrePlato(nombrePlato);
-		this.setTipo(tipo);
+		this.id = id;
+		this.nombrePlato = nombrePlato.trim();
+		this.tipo = tipo.trim();
+		estado = EstadoPedido.PENDIENTE;
+	}
+
+	public int getId() {
+		return id;
 	}
 
 	public String getNombrePlato() {
@@ -15,14 +23,18 @@ public class Pedido {
 	}
 
 	public void setNombrePlato(String nombrePlato) {
-		this.nombrePlato = nombrePlato;
+		this.nombrePlato = nombrePlato.trim();
 	}
 
 	public String getTipo() {
 		return tipo;
 	}
 
-	public void setTipo(String tipo) {
-		this.tipo = tipo;
+	public EstadoPedido getEstado() {
+		return estado;
+	}
+
+	public void setEstado(EstadoPedido estado) {
+		this.estado = estado;
 	}
 }

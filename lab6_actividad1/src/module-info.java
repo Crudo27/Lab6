@@ -1,8 +1,2 @@
-/**
- * 
- */
-/**
- * 
- */
-module lab6_actividad1 {
+module laboratorio.pedidos {
 }

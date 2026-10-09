@@ -1,0 +1,13 @@
+src/controlador/TiendaControlador.java
+src/controlador/UsuarioControlador.java
+src/modelo/Compra.java
+src/modelo/ItemCarrito.java
+src/modelo/Producto.java
+src/modelo/Resena.java
+src/modelo/TiendaModelo.java
+src/modelo/Usuario.java
+src/modelo/UsuarioModelo.java
+src/module-info.java
+src/principal/Main.java
+src/vista/TiendaVista.java
+src/vista/UsuarioVista.java
