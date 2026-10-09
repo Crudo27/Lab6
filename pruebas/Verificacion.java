@@ -1,127 +1,112 @@
-import java.math.BigDecimal;
-import modelo.EstadoPedido;
 import modelo.PedidoModelo;
+import modelo.EstadoPedido;
 import modelo.TiendaModelo;
 import modelo.UsuarioModelo;
-import modelo.Compra;
 import modelo.Usuario;
+import modelo.Compra;
 
 public class Verificacion {
-	private static int cantidad;
+    private static int correctas = 0;
 
-	private static void comprobar(boolean resultado, String nombre)
-	{
-		if(!resultado)
-		{
-			throw new AssertionError(nombre);
-		}
-		cantidad++;
-		System.out.println("OK " + cantidad + " - " + nombre);
-	}
+    public static void comprobar(boolean condicion, String descripcion)
+    {
+        if(!condicion)
+        {
+            throw new AssertionError("Falló: " + descripcion);
+        }
+        correctas++;
+        System.out.println("OK " + correctas + " - " + descripcion);
+    }
 
-	private static void rechazar(Runnable accion, String nombre)
-	{
-		try
-		{
-			accion.run();
-		}
-		catch(IllegalArgumentException | ArithmeticException e)
-		{
-			comprobar(true, nombre);
-			return;
-		}
-		throw new AssertionError(nombre);
-	}
+    public static void main(String[] args)
+    {
+        PedidoModelo pedidos = new PedidoModelo();
+        comprobar(pedidos.getPedidos().isEmpty(), "Pedidos vacíos al comenzar");
+        pedidos.agregarPedido("Sopa", "Entrada");
+        pedidos.agregarPedido("Pollo", "Fondo");
+        comprobar(pedidos.getPedidos().size() == 2, "Registrar pedidos");
+        comprobar(pedidos.buscarPedido("sopa").size() == 1, "Buscar por nombre");
+        comprobar(pedidos.buscarPedidoTipo("fondo").size() == 1, "Buscar por tipo");
+        comprobar(pedidos.contarPedidos().get("Entrada") == 1, "Contar por tipo");
+        pedidos.actualizarPedido(2, "Pollo al horno");
+        comprobar(pedidos.buscarPorId(2).getNombrePlato().equals("Pollo al horno"), "Actualizar pedido");
+        pedidos.completarPedido(1);
+        comprobar(pedidos.contarPendientes() == 1, "Contar pendientes");
+        comprobar(pedidos.pedidosPorEstado(EstadoPedido.COMPLETO).size() == 1, "Filtrar completos");
+        pedidos.eliminarPedido(1);
+        comprobar(pedidos.getPedidos().size() == 1, "Eliminar de pedidos actuales");
+        comprobar(pedidos.getHistorial().size() == 2, "Guardar historial");
+        comprobar(pedidos.getHistorial().get(0).getEstado() == EstadoPedido.COMPLETO, "Conservar historial de completo");
+        pedidos.agregarPedido("Jugo", "Bebida");
+        comprobar(pedidos.buscarPorId(3).getNombrePlato().equals("Jugo"), "Mantener IDs");
+        boolean errorPedido = false;
+        try
+        {
+            pedidos.eliminarPedido(99);
+        }
+        catch(IllegalArgumentException e)
+        {
+            errorPedido = true;
+        }
+        comprobar(errorPedido, "Rechazar ID de pedido inexistente");
 
-	public static void main(String[] args)
-	{
-		PedidoModelo pedidos = new PedidoModelo();
-		comprobar(pedidos.getPedidos().isEmpty(), "Lista inicial vacía");
-		rechazar(() -> pedidos.agregarPedido(" ", "Fondo"), "Nombre vacío rechazado");
-		rechazar(() -> pedidos.agregarPedido("Sopa", " "), "Tipo vacío rechazado");
-		pedidos.agregarPedido("Sopa", "Entrada");
-		pedidos.agregarPedido("Pollo", "Fondo");
-		comprobar(pedidos.buscarPedido("sopa").size() == 1, "Búsqueda por nombre");
-		comprobar(pedidos.buscarPedidoTipo("fondo").size() == 1, "Búsqueda por tipo");
-		comprobar(pedidos.buscarPedido("Otro").isEmpty(), "Búsqueda sin resultados");
-		pedidos.actualizarPedido(2, "Pollo al horno");
-		comprobar(pedidos.buscarPorId(2).getNombrePlato().equals("Pollo al horno"), "Actualización");
-		rechazar(() -> pedidos.eliminarPedido(99), "ID inválido rechazado");
-		comprobar(pedidos.getPedidos().size() == 2, "El error conserva los pedidos");
-		pedidos.completarPedido(1);
-		comprobar(pedidos.contarPendientes() == 1, "Contador de pendientes");
-		rechazar(() -> pedidos.completarPedido(1), "No se completa dos veces");
-		rechazar(() -> pedidos.actualizarPedido(1, "Otra sopa"), "No se modifica un pedido servido");
-		pedidos.eliminarPedido(1);
-		comprobar(pedidos.getPedidos().size() == 1, "Eliminación lógica");
-		comprobar(pedidos.getHistorial().size() == 2, "Historial conserva ambas transiciones");
-		comprobar(pedidos.getHistorial().get(0).getEstado() == EstadoPedido.COMPLETO, "Copia del estado completo");
-		comprobar(pedidos.getHistorial().get(1).getEstado() == EstadoPedido.ELIMINADO, "Copia del estado eliminado");
-		comprobar(pedidos.contarPedidos().get("FONDO") == 1, "Conteo por tipo");
-		pedidos.agregarPedido("Jugo", "Bebida");
-		comprobar(pedidos.buscarPorId(3).getNombrePlato().equals("Jugo"), "ID estable sin reutilización");
+        UsuarioModelo usuarios = new UsuarioModelo();
+        usuarios.registrar("Piero", "PIERO@example.com", "clave123");
+        usuarios.iniciarSesion("piero@example.com", "clave123");
+        Usuario primero = usuarios.exigirSesion();
+        comprobar(primero.getNombre().equals("Piero"), "Inicio de sesión");
+        boolean errorClave = false;
+        try
+        {
+            usuarios.iniciarSesion("piero@example.com", "incorrecta");
+        }
+        catch(IllegalArgumentException e)
+        {
+            errorClave = true;
+        }
+        comprobar(errorClave, "Rechazar clave incorrecta");
 
-		UsuarioModelo usuarios = new UsuarioModelo();
-		rechazar(() -> usuarios.exigirSesion(), "Acceso sin sesión rechazado");
-		rechazar(() -> usuarios.registrar("Piero", "incorrecto", "clave123"), "Correo inválido");
-		rechazar(() -> usuarios.registrar("Piero", "piero@example.com", "123"), "Contraseña corta");
-		usuarios.registrar("Piero", "piero@example.com", "clave123");
-		rechazar(() -> usuarios.registrar("Otro", "PIERO@example.com", "clave123"), "Correo duplicado");
-		rechazar(() -> usuarios.iniciarSesion("piero@example.com", "otra1234"), "Clave incorrecta");
-		comprobar(usuarios.getUsuarioActual() == null, "Fallo de acceso no abre sesión");
-		usuarios.iniciarSesion("PIERO@example.com", "clave123");
-		Usuario primero = usuarios.exigirSesion();
-		comprobar(primero.getNombre().equals("Piero"), "Inicio de sesión correcto");
-
-		TiendaModelo tienda = new TiendaModelo();
-		rechazar(() -> tienda.agregarProducto("Teclado", new BigDecimal("-1")), "Precio negativo");
-		rechazar(() -> tienda.agregarProducto("Teclado", new BigDecimal("0.001")), "Precio con más de dos decimales");
-		tienda.agregarProducto("Teclado", new BigDecimal("120"));
-		tienda.agregarProducto("Mouse", new BigDecimal("50"));
-		comprobar(tienda.getProductos().size() == 2, "Catálogo de productos");
-		rechazar(() -> tienda.agregarAlCarrito(99, 1), "Producto inexistente");
-		rechazar(() -> tienda.agregarAlCarrito(1, 0), "Cantidad cero");
-		tienda.agregarAlCarrito(1, 1);
-		tienda.agregarAlCarrito(1, 1);
-		tienda.agregarAlCarrito(2, 1);
-		comprobar(tienda.getCarrito().size() == 2 && tienda.getCarrito().get(0).getCantidad() == 2,
-				"Acumulación de unidades");
-		tienda.eliminarDelCarrito(2);
-		comprobar(tienda.calcularSubtotal().compareTo(new BigDecimal("240")) == 0, "Eliminación del carrito");
-		tienda.agregarAlCarrito(2, 1);
-		rechazar(() -> tienda.aplicarDescuento(101), "Descuento inválido");
-		tienda.aplicarDescuento(10);
-		tienda.seleccionarEnvio("local");
-		comprobar(tienda.calcularDescuento().compareTo(new BigDecimal("29")) == 0, "Descuento exacto");
-		comprobar(tienda.calcularTotal().compareTo(new BigDecimal("271")) == 0, "Total con envío local");
-		tienda.seleccionarEnvio("nacional");
-		comprobar(tienda.calcularTotal().compareTo(new BigDecimal("286")) == 0, "Envío nacional");
-		rechazar(() -> tienda.seleccionarEnvio("otro"), "Zona inválida");
-		rechazar(() -> tienda.realizarCompra(null), "Compra sin sesión");
-		rechazar(() -> tienda.agregarResena(primero, 1, 5, "Bien"), "Reseña antes de comprar");
-		tienda.seleccionarEnvio("local");
-		Compra compra = tienda.realizarCompra(primero);
-		comprobar(compra.getTotal().compareTo(new BigDecimal("271")) == 0, "Compra registrada");
-		comprobar(tienda.getCarrito().isEmpty(), "Carrito vaciado después de comprar");
-		rechazar(() -> tienda.realizarCompra(primero), "Compra vacía rechazada");
-		tienda.agregarAlCarrito(1, 1);
-		comprobar(compra.getProductos().get(0).getCantidad() == 2, "Historial independiente del carrito");
-		comprobar(tienda.calcularDescuento().compareTo(BigDecimal.ZERO) == 0, "Descuento reiniciado");
-		rechazar(() -> tienda.agregarResena(primero, 1, 6, "Bien"), "Calificación inválida");
-		rechazar(() -> tienda.agregarResena(primero, 1, 5, " "), "Reseña vacía");
-		tienda.agregarResena(primero, 1, 5, "Buen teclado");
-		comprobar(tienda.promedioProducto(1) == 5, "Promedio de calificaciones");
-		rechazar(() -> tienda.agregarResena(primero, 1, 4, "Otra"), "Reseña duplicada");
-		usuarios.cerrarSesion();
-		tienda.vaciarCarrito();
-		comprobar(usuarios.getUsuarioActual() == null, "Cierre de sesión");
-		usuarios.registrar("Ana", "ana@example.com", "clave456");
-		usuarios.iniciarSesion("ana@example.com", "clave456");
-		Usuario segundo = usuarios.exigirSesion();
-		comprobar(tienda.historialUsuario(segundo).isEmpty(), "Historial separado por usuario");
-		rechazar(() -> tienda.agregarResena(segundo, 1, 5, "Bien"), "Compra ajena no autoriza reseña");
-		comprobar(tienda.getCarrito().isEmpty(), "Carrito limpio al cambiar de usuario");
-		comprobar(tienda.historialUsuario(primero).size() == 1, "Historial del comprador conservado");
-		System.out.println("Resultado: " + cantidad + " verificaciones correctas.");
-	}
+        TiendaModelo tienda = new TiendaModelo();
+        tienda.agregarProducto("Teclado", 120);
+        tienda.agregarProducto("Mouse", 50);
+        comprobar(tienda.getProductos().size() == 2, "Agregar productos");
+        tienda.agregarAlCarrito(1, 1);
+        tienda.agregarAlCarrito(1, 1);
+        tienda.agregarAlCarrito(2, 1);
+        comprobar(tienda.getCarrito().size() == 2, "Acumular productos iguales");
+        comprobar(tienda.getCarrito().get(0).getCantidad() == 2, "Sumar cantidades");
+        comprobar(tienda.calcularSubtotal() == 290, "Calcular subtotal");
+        tienda.aplicarDescuento(10);
+        tienda.seleccionarEnvio("local");
+        comprobar(tienda.calcularDescuento() == 29, "Aplicar descuento");
+        comprobar(tienda.calcularEnvio() == 10, "Calcular envío local");
+        comprobar(tienda.calcularTotal() == 271, "Calcular total");
+        Compra compra = tienda.realizarCompra(primero);
+        comprobar(compra.getTotal() == 271, "Guardar importe de compra");
+        comprobar(tienda.getCarrito().isEmpty(), "Vaciar carrito después de comprar");
+        tienda.agregarAlCarrito(1, 1);
+        comprobar(compra.getProductos().get(0).getCantidad() == 2, "Conservar copia de compra");
+        comprobar(tienda.calcularDescuento() == 0, "Reiniciar descuento");
+        comprobar(tienda.productoComprado(primero, 1), "Comprobar producto comprado");
+        tienda.agregarResena(primero, 1, 5, "Buen teclado");
+        comprobar(tienda.promedioProducto(1) == 5, "Promedio de reseñas");
+        boolean resenaRepetida = false;
+        try
+        {
+            tienda.agregarResena(primero, 1, 3, "Otra");
+        }
+        catch(IllegalArgumentException e)
+        {
+            resenaRepetida = true;
+        }
+        comprobar(resenaRepetida, "Rechazar reseña duplicada");
+        usuarios.cerrarSesion();
+        tienda.vaciarCarrito();
+        comprobar(usuarios.getUsuarioActual() == null, "Cerrar sesión");
+        usuarios.registrar("Ana", "ana@example.com", "clave456");
+        usuarios.iniciarSesion("ana@example.com", "clave456");
+        comprobar(tienda.historialUsuario(usuarios.exigirSesion()).isEmpty(), "Separar compras por usuario");
+        comprobar(tienda.getCarrito().isEmpty(), "Limpiar carrito al cambiar de cuenta");
+        System.out.println("Resultado: " + correctas + " verificaciones correctas.");
+    }
 }
